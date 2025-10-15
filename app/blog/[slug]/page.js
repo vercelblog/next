@@ -5,7 +5,7 @@ export async function generateMetadata({ params }) {
   const { slug} = await params
 
   try {
-    const res = await axios.get(`http://localhost:3000/api/blog/${slug}`);
+    const res = await axios.get(`https://wepzite.in/api/blog/${slug}`);
     const blog = res.data;
     if (!blog) return {};
 
@@ -40,7 +40,7 @@ export async function generateMetadata({ params }) {
 export default async function BlogPage({ params }) {
   const { slug} = await params
 
-  const res = await fetch(`http://localhost:3000/api/blog/${slug}`);
+  const res = await fetch(`https://wepzite.in/api/blog/${slug}`);
   const blog = await res.json();
 
   return <BlogClient blog={blog} slug={slug} />;

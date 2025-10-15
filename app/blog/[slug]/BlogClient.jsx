@@ -3,8 +3,8 @@
 
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
-import Breadcrumbs from "../../components/Breadcrumbs";
-import Back from "../../components/Back";
+import Breadcrumbs from "../../../components/Breadcrumbs";
+import Back from "../../../components/Back";
 import axios from "axios";
 
 export default function BlogPage() {

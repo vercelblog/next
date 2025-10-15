@@ -6,6 +6,15 @@ const AnekTamil = Anek_Tamil({
   subsets: ["latin"],
 });
 
+// ✅ Add metadata section here
+export const metadata = {
+  title: "Wepzite", // You can change this
+  description: "Wepzite Blog",
+  verification: {
+    google: "WZ3lArZgFuE1KvmL5ybnlHNfwUzIsu8wGySj_0FTL7A", // 👈 Your code
+  },
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">

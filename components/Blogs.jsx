@@ -19,7 +19,7 @@ const Blogs = ({ blogs }) => {
         {blogs.slice(0, 2).map((blog) => (
           <div
             key={blog._id}
-            onClick={() => router.push(`/${blog.slug}`)}
+            onClick={() => router.push(`/blog/${blog.slug}`)}
             className="bg-white rounded p-4 transition w-full cursor-pointer"
           >
             {blog.blocks.find((b) => b.type === "coverImage") && (
