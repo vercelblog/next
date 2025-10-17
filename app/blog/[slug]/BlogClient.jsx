@@ -15,7 +15,7 @@ export default function BlogPage() {
   const [form, setForm] = useState({ username: "", email: "", text: "",slug:slug });
   const [showCommentForm, setShowCommentForm] = useState(false);
   const [comments, setComments] = useState([]);
-  const [timeLeft, setTimeLeft] = useState(60);
+  const [timeLeft, setTimeLeft] = useState(6);
   const [ready, setReady] = useState(false);
 
   // Random color generator for avatar
