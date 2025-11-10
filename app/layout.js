@@ -20,6 +20,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
     <head>
         {/* This will add the Google site verification meta tag */}
+    <meta name="google-adsense-account" content="ca-pub-8489535629363605">
         <meta
           name="google-site-verification"
           content={metadata.verification.google}
