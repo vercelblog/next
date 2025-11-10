@@ -1,4 +1,6 @@
+// app/layout.js
 import { Anek_Tamil } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const AnekTamil = Anek_Tamil({
@@ -6,28 +8,27 @@ const AnekTamil = Anek_Tamil({
   subsets: ["latin"],
 });
 
-// ✅ Add metadata section here
 export const metadata = {
-  title: "JavaBro", // You can change this
+  title: "JavaBro",
   description: "java bro",
   verification: {
-    google: "e646Y3CvAN53USI2OXIOt6rYqff6zrInfFwDgy3ejLA", // 👈 Your code
+    google: "e646Y3CvAN53USI2OXIOt6rYqff6zrInfFwDgy3ejLA",
   },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-    <head>
-        {/* This will add the Google site verification meta tag */}
-    <meta name="google-adsense-account" content="ca-pub-8489535629363605">
-        <meta
-          name="google-site-verification"
-          content={metadata.verification.google}
-        />
-    </head>
       <body className={`${AnekTamil.variable} antialiased`}>
         {children}
+
+        {/* Google AdSense */}
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+          strategy="afterInteractive"
+          data-ad-client="ca-pub-8489535629363605"
+        />
       </body>
     </html>
   );
