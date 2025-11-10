@@ -8,16 +8,23 @@ const AnekTamil = Anek_Tamil({
 
 // ✅ Add metadata section here
 export const metadata = {
-  title: "Wepzite", // You can change this
-  description: "Wepzite Blog",
+  title: "JavaBro", // You can change this
+  description: "java bro",
   verification: {
-    google: "WZ3lArZgFuE1KvmL5ybnlHNfwUzIsu8wGySj_0FTL7A", // 👈 Your code
+    google: "e646Y3CvAN53USI2OXIOt6rYqff6zrInfFwDgy3ejLA", // 👈 Your code
   },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+    <head>
+        {/* This will add the Google site verification meta tag */}
+        <meta
+          name="google-site-verification"
+          content={metadata.verification.google}
+        />
+    </head>
       <body className={`${AnekTamil.variable} antialiased`}>
         {children}
       </body>
